@@ -54,6 +54,7 @@ disp('Problema 31');
 pretty(diff(f(x)));
 %Problema 32
 f(x)=(a^2+x^2)/(a^2-x^2);
+disp('Problema 32');
 pretty(diff(f(x)));
 diary off;
 fclose(results);

@@ -12,7 +12,7 @@ f(x)=log(a*x*x+b);
 disp('Problema 2');
 pretty(diff(f(x)));
 %Problema 3
-f(x)=log(a*x+b)^2;
+f(x)=log((a*x+b)^2);
 disp('Problema 3');
 pretty(diff(f(x)));
 %Problema 4
@@ -39,7 +39,7 @@ pretty(diff(f(x)));
 %Problema 9
 f(x)=log((x^2)/(1+x^2));
 disp('Problema 9');
-pretty(diff(f(x)));
+pretty(simplify(diff(f(x))));
 %Problema 10
 f(x)=log(sqrt(9-2*x^2));
 disp('Problema 10');
@@ -47,19 +47,19 @@ pretty(diff(f(x)));
 %Problema 11
 f(x)=log(a*x*sqrt(a+x));
 disp('Problema 11');
-pretty(diff(f(x)));
+pretty(simplify(diff(f(x))));
 %Problema 12
 f(x)=x*log(x);
 disp('Problema 12');
 pretty(diff(f(x)));
 %Problema 13
-f(x)=ln(x+sqrt(1+x^2));
+f(x)=log(x+sqrt(1+x^2));
 disp('Problema 13');
 pretty(diff(f(x)));
 %Problema 14
 syms f(t) t;
-f(t)=ln(sqrt((a+b)/(a-b)));
+f(t)=log(sqrt((a+b*t)/(a-b*t)));
 disp('Problema 14');
-pretty(diff(f(x)));
+pretty(simplify(diff(f(x))));
 diary off;
 fclose(results);

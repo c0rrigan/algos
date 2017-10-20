@@ -9,11 +9,11 @@ disp('Problema 41');
 pretty(diff(f(x)));
 %Problema 42
 disp('Problema 42');
-f(x)=(2*x)^(1/2)+(3*x)^(1/2);
+f(x)=(2*x)^(1/2)+(3*x)^(1/3);
 pretty(diff(f(x)));
 %Problema 43
 disp('Problema 43');
-f(x)=(2-x)/(1+2*x*x);
+f(x)=(-x+2)/(1+2*x*x);
 pretty(simplify(diff(f(x))));
 %Problema 44
 syms b a;
@@ -42,5 +42,5 @@ pretty(diff(f(x)));
 f(t)=((2*t-1)/(t*t))^(1/2);
 disp('Problema 49');
 pretty(simplify(diff(f(t),t)));
-
+diary off;
 fclose(results);

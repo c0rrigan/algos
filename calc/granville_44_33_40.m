@@ -9,7 +9,7 @@ f(x)=((a*a+x*x)^(1/2));
 disp('Problema 33');
 pretty(diff(f(x)));
 %Problema 34
-f(x)=x/(a*a+x*x)^1/2
+f(x)=x/(a*a+x*x)^(1/2);
 disp('Problema 35');
 pretty(diff(f(x)));
 %Problema 35
@@ -36,8 +36,8 @@ f(x)=sqrt(2*p*x);
 disp('Problema 39');
 pretty(diff(f(x)));
 %Problema 40
-f(x)=(b/a)(sqrt(a^2-x^2));
+f(x)=(b/a)*(sqrt(a^2-x^2));
 disp('Problema 40');
 pretty(diff(f(x)));
-
+diary off;
 fclose(results);
