@@ -54,6 +54,10 @@ pretty(diff(f(u)));
 f(u)=asin(u/a)+(sqrt(a^2-u^2)/u);
 disp('Problema 17');
 pretty(diff(f(u)));
+%Problema 18
+f(v)=a*asin(1-u/a)+sqrt(2*a*u+u^2);
+disp('Problema 18');
+pretty(diff(f(u)))
 
 
 diary off;
