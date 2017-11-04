@@ -8,6 +8,9 @@ int main(){
     int n,i,j;
     printf("Introduzca numeros \n");
     scanf("%d",&n);
+    //Comprobación de n en el rango [1,20]
+    if(!(n>0&&n<=20))
+	return 0;
     /*Declarar un buffer de números con n+1 posiciones,
      * el buffer va a contener los números de la línea
      * anterior y en base a el se van a calcular las 
