@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 //Tamaño de la matriz
-#define GRID_SIZE 18
+#define GRID_SIZE 20
 //Diccionario de palabras de la sopa de letras
-char dict[][GRID_SIZE] = {"practica","programacion"};/*,"internet","diferencial","calculo","informacion111111"};*/
+char dict[][GRID_SIZE] = {"PRACTICA","PROGRAMACION"};/*,"internet","diferencial","calculo","informacion111111"};*/
 void print_cmatrix(char w[][GRID_SIZE]);
 void setwrd(char w[][GRID_SIZE],char dictionary[][GRID_SIZE]);
 int wsize(char w[]);
@@ -14,7 +14,7 @@ void sopa(){
     for(i=0;i<GRID_SIZE;i++){
         for(j=0;j<GRID_SIZE;j++){
             w[i][j]='a'+rand()%range;
-        } 
+        }
     }
     setwrd(w,dict);
     print_cmatrix(w);
@@ -25,22 +25,24 @@ void setwrd(char w[][GRID_SIZE],char dictionary[][GRID_SIZE]){
     printf("debug:%d\n",n);
     while(--n>=0){
         int end;
-        int x = rand()%GRID_SIZE-1;
-        int y = rand()%GRID_SIZE-1;
+        int posis[]={12,2,3,4};
+        //int x = rand()%GRID_SIZE-1;
+        //int y = rand()%GRID_SIZE-1;
+        int x = posis[n+1];
+        int y = posis[n];
         int size = wsize(dictionary[n]);
         printf("debug:n=%d size=%d x=%d y=%d\n",n,size,x,y);
         int i,j;
-        y=16;
         if(x%2==0){
             for(i=0;i<size;y++,i++){
-                if(size<y){
-                    w[x][y-i]=dictionary[n][i]-32;
-                }
-                    w[x][y]=dictionary[n][i]-32;
+                w[x][y]=dictionary[n][i];
             }
         }else{
-            i++;
+            for(i=0;i<size;x++,i++){
+                w[x][y]=dictionary[n][i];
+            }
         }
+        printf("\n\n");
     }
 }
 int wsize(char w[]){
