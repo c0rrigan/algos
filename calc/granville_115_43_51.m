@@ -1,4 +1,4 @@
-results = fopen('resuts','w');
+results = fopen('results','w');
 diary results;
 diary on;
 syms f(x) x;

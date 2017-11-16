@@ -1,4 +1,4 @@
-results = fopen('resuts','w');
+results = fopen('results','w');
 diary results;
 diary on;
 
@@ -25,20 +25,20 @@ disp('Problema 56');
 pretty(simplify(diff(f(x))));
 %Problema 57
 syms f(t) t;
-f(x)=log(t/(sqrt(2*t+3)));
+f(t)=log(t/(sqrt(2*t+3)));
 disp('Problema 57');
-pretty(simplify(diff(f(x))));
+pretty(simplify(diff(f(t))));
 %Problema 58
 f(x) = exp(sqrt(x))*log(sqrt(x));
 disp('Problema 58');
 pretty(diff(f(x)));
 %Problema 59
-f(x)=10^t*log10(t);
+f(t)=10^t*log10(t);
 disp('Problema 59');
-pretty(diff(f(x)));
+pretty(diff(f(t)));
 %Problema 60
 syms n;
-f(x)=(a*exp(1))^n*x
+f(x)=exp(n*x)*a^(n*x);
 disp('Problema 60');
 pretty(diff(f(x)));
 

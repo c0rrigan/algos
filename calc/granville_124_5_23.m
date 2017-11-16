@@ -1,4 +1,4 @@
-results = fopen('resuts','w');
+results = fopen('results','w');
 diary results;
 diary on;
 
@@ -20,17 +20,17 @@ pretty(diff(f(t)));
 syms f(v) v;
 f(v)=2*cot(v/2);
 disp('Problema 8');
-pretty(diff(f(v)));
+pretty(diff(f(v),v));
 %Problema 9
 f(x)=sec(4*x);
 disp('Problema 9');
 pretty(diff(f(x)));
 %Problema 10
 syms b;
-f(x)=a*csc(b*x)
+f(x)=a*csc(b*x);
 disp('Problema 10');
 disp('theta = x');
-pretty(diff(f(x)));
+pretty(simplify(diff(f(x))));
 %Problema 11
 f(x)=1/2*(sin(x))^2;
 disp('Problema 11');
@@ -45,9 +45,9 @@ disp('Problema 13');
 disp('theta = x');
 pretty(diff(f(x)));
 %Problema 14
-f(x)=4/(sqrt(sec(x));
+f(x)=4/(sqrt(sec(x)));
 disp('Problema 14');
-pretty(diff(f(x)));
+pretty(simplify(diff(f(x))));
 %Problema 15
 f(x)=x*cos(x);
 disp('Problema 15');
@@ -75,7 +75,7 @@ f(x)=log(sqrt(cos(2*x)));
 disp('Problema 20');
 pretty(diff(f(x)));
 %Problema 21
-f(x)=exp(a*x)*sin(b*X);
+f(x)=exp(a*x)*sin(b*x);
 disp('Problema 21');
 pretty(diff(f(x)));
 %Problema 22
@@ -85,7 +85,7 @@ pretty(diff(f(x)));
 %Problema 23
 f(x)=log(tan(x/2));
 disp('Problema 23');
-pretty(diff(f(x)));
+pretty(simplify(diff(f(x))));
 
 diary off;
 fclose(results);

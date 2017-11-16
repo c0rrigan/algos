@@ -1,0 +1,31 @@
+Problema 33
+          1
+--------------------
+   3/2     /     1 \
+2 x    sqrt| 1 - - |
+           \     x /
+
+Problema 34
+                    exp(x)
+exp(x) acos(x) - ------------
+                           2
+                 sqrt(1 - x )
+
+Problema 35
+        1
+----------------
+          2
+atan(x) (x  + 1)
+
+Problema 36
+               1
+------------------------------
+                            2
+sqrt(asin(2 x)) sqrt(1 - 4 x )
+
+Problema 37
+  acos(sqrt(x))          1
+- ------------- - ---------------
+         3/2      2 x sqrt(1 - x)
+      2 x
+

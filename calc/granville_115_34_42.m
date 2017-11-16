@@ -1,4 +1,4 @@
-results = fopen('resuts','w');
+results = fopen('results','w');
 diary results;
 diary on;
 
@@ -6,7 +6,7 @@ diary on;
 syms f(x) x f(t) t a b;
 f(x)=(a/t)^t;
 disp('Problema 34');
-pretty(diff(f(x)));
+pretty(simplify(diff(f(x))));
 %Problema 35
 f(x)=(x*(3*x+a)^(1/3))/sqrt(2*x+b);
 disp('Problema 35');
@@ -19,7 +19,7 @@ pretty(diff(f(x)));
 syms n m;
 f(x)=x^n*(a+b*x)^m;
 disp('Problema 37');
-pretty(diff(f(x)));
+pretty(simplify(diff(f(x))));
 %Problema 38
 f(x)=log(x^2+2);
 res = diff(f(x));
