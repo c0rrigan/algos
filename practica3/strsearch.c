@@ -5,14 +5,12 @@ int strsize(char[]);
 void strsearch(char[],char[]);
 
 int main(){
-    //char w1[] = "0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15";
-    //char w2[] = ",";
-    char w1[256],w2[256];
-    printf("Introduzca palabra 1");
-    scanf("%s",&w1); 
-    printf("Introduzca palabra 1");
-    scanf("%s",&w2); 
-    strsearch(w1,w2);
+    char str1[]="abababacabababaccabababacabaababacababc";
+    char str2[]="ababaca";
+    strsearch(str1,str2);
+    char str3[]="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15";
+    char str4[]=",";
+    strsearch(str3,str4);
 }
 /**
  * Funcion que imprime las ocurrencias de la cadena2 dentro
@@ -24,14 +22,15 @@ void strsearch(char str1[],char str2[]){
     for(i = 0;str1[i]!='\0';i++){
 	if(str1[i]==str2[0]){
 	    if(stpsearch(str1,i,str2)){
-		printf("%d\n",i);
+		printf("%d ",i);
 		i+=size;
 	    }
 	}
     }
+    printf("\n");
 }
 /**
- * Función para buscar la cadena 2 dentro de la cadena 1 
+ * Función para buscar la cadena 2 dentro de la cadena 1
  * a partir del index pos
  */
 int stpsearch(char w1[],int pos,char w2[]){
