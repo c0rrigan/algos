@@ -1,0 +1,108 @@
+\documentclass[a4paper]{article}
+\usepackage{amssymb}
+\usepackage[tmargin=1.5cm]{geometry}
+\usepackage[spanish]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[linesnumbered,ruled]{algorithm2e}
+\begin{document}
+\begin{center}
+{\LARGE Algoritmia y Programación Estructurada}\\
+{\Large Práctica VI}\\
+{\large Nava López Sebastián}\\
+{\large ICV2}\\
+\end{center}
+{\Large Cuadrado mágico}\\
+\begin{algorithm}[H]
+    \caption{Cuadrado magico}
+    \SetKwInOut{Input}{Input}
+    \SetKwInOut{Output}{Output}
+    \Input{$x,x=2y+1, y \in \mathbb{Z}^{+}$}
+    \Begin{
+	$m\leftarrow 1$\\    
+	$h\leftarrow n-1-n/2$\\
+	$l\leftarrow 0$\\
+	\For{$k\leftarrow n-1 $ to $2n-1$}{
+	$i\leftarrow k$\\
+	$j\leftarrow l$\\
+	\For{$step\leftarrow 0$ to $n$}{
+	$m\leftarrow m+1$\\
+	$M[i][j]\leftarrow m$\\
+	$i\leftarrow i-1$\\
+	$j\leftarrow j+1$
+	}
+    }
+    $j\leftarrow 0$\\ 
+    \For{$i\leftarrow n-1$ to $2n$ step $n-1$}{
+    $a\leftarrow i$\\
+    $b\leftarrow j$\\
+    $pass\leftarrow h$\\
+    \For{$i\leftarrow h$ to $2n-1$}{
+    \eIf{$i<h$ or $i\geq n+h$}{
+	\For{$j\leftarrow h to 2n-h$}{
+	\If{$M[i][j]\neq 0$}{
+	$Move(M,i,j,n)$}    
+    }
+    }{
+    \For{$j\leftarrow 0 to h$}{
+	\If{$M[i][j]\neq 0$}{
+	$Move(M,i,j,n)$}    
+	\If{$M[i][n+h+j]\neq 0$}{
+	$Move(M,i,n+hj,n)$}        
+    }
+    }
+    $j\leftarrow j+n-1$
+    }
+    }
+    }
+\end{algorithm}
+\begin{algorithm}[H]
+\caption{Move}
+\SetKwInOut{Input}{Input}
+\Input{$M[m_1,m_2,\ldots,m_1],i\in\mathbb{Z}^{+},y \in\mathbb{Z}^{+},x \in\mathbb{Z}^{+},n \in\mathbb{Z}^{+}$}
+\Begin{
+$center\leftarrow n-1$\\
+$h=n-1-n/2$\\
+$x_0\leftarrow x$\\
+$y_0\leftarrow y$\\
+\eIf{$x+y<2*center$}{
+\If{$x<h$}{
+$x\leftarrow x+n$}
+\If{$y<h$}{
+$y\leftarrow y+n$}
+}{:
+\If{$x>center+h$}{
+$x\leftarrow x-n$}
+\If{$y>center+h$}{
+$y\leftarrow y-n$}
+}
+$M[y][x]=M[x_0][y_0]$
+}
+\end{algorithm}
+\newpage
+\Large Histograma\\
+\begin{algorithm}[H]
+\caption{Histograma}
+\SetKwInOut{Input}{Input}
+\Input{$x,S[x][y],x\geq 1,y\leq 30,x,y\in\mathbb{Z}^{+}$}
+\Begin{
+\For{$i\leftarrow 0 to n$}{
+\While{$c\leftarrow stdin()$}{
+\If{$c = Newline$ \textbf{or} $j = 30$}{
+\textbf{end loop}}	
+}
+\If{$c=A$}{$V[0]\leftarrow V[0]+1$}
+\If{$c=E$}{$V[1]\leftarrow V[1]+1$}
+\If{$c=I$}{$V[2]\leftarrow V[2]+1$}
+\If{$c=O$}{$V[3]\leftarrow V[3]+1$}
+\If{$c=U$}{$V[4j]\leftarrow V[4]+1$}
+}
+\For{\textbf{each} integer \textbf{in} $V$}{
+\textbf{print} $Vocal$\\
+\For{$j\leftarrow 0$ to $V[i]$}{
+\textbf{print} $\#$
+}
+}
+}
+\end{algorithm}
+\end{document}
