@@ -15,8 +15,8 @@ int main(){
     }while(n%2!=1);
     int **M=get_matrix(2*n-1);
     magic_square(M,n);
-    print_sq_matrix(M,n); 
-    free_matrix(M,2*n-1); 
+    print_sq_matrix(M,n);
+    free_matrix(M,2*n-1);
     return 0;
 }
 void magic_square(int **M,int n){

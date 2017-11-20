@@ -7,7 +7,7 @@ char VO[]={'A','E','I','O','U'};
 
 int main(){
     char c;
-    int i,j,n=4;
+    int i,j,n=1;
     do{
         printf("Número de líneas :\n");
         scanf("%d",&n);
