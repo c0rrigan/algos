@@ -1,0 +1,88 @@
+\documentclass[a4paper]{article}
+\usepackage[spanish]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[linesnumbered,ruled]{algorithm2e}
+\usepackage[tmargin=1.5cm]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\begin{document}
+\begin{center}
+{\LARGE Algoritmia y Programación Estructurada}\\
+{\Large Práctica VI}\\
+{\large Nava López Sebastián}\\
+{\large ICV2}\\
+\end{center}
+{\Large Ahorcado\\}
+\begin{algorithm}[H]
+\caption{Ahorcado}
+\Begin{
+$state\leftarrow 0$\\
+\While{$state \leq 6$}{
+$i\leftarrow 1$\\
+$\textbf{scan}\ c$\\
+\For{$i<n(W)$}{
+\If{$W[i]=c$}{
+\If{$U[i]\ is\ empty$}{
+$U[i]=W[i]$\\
+$break$
+} 
+}
+$state \leftarrow state+1$
+}
+\For{$i<n(W)$}{
+\If{$U[i]\ is\ empty$}{
+$break$
+}
+$exit$
+}
+}
+}
+\end{algorithm}
+\newpage
+{\Large Sopa de Letras\\}
+\begin{algorithm}[H]
+\caption{Sopa de Letras}
+\SetKwInOut{Input}{Input}
+\SetKwInOut{Output}{Output}
+\Input{ $n \in \mathbb{Z}^{+}$}
+\Output{$S=\begin{bmatrix}
+s_{11} & s_{12} & \ldots & s_{1n} \\ s_{21} & s_{22} & \ldots & s_{2n} \\ \vdots & \vdots & \ddots & \vdots \\ s_{n1} & s_{n2} & \ldots & s_{n}
+\end{bmatrix}$}
+\Begin{
+$i\leftarrow 1$\\
+\For{$i\ \textbf{to}\ n$}{
+$j\leftarrow 1$\\
+\For{$j\ \textbf{to}\ n$}{
+$S[i][j]=random\ character$
+}
+}
+$p\leftarrow size(DICTIONARY)$\\
+\While{$p \geq 0$}{
+$x\leftarrow random,random\in[1,n-1]$\\
+$y\leftarrow random,random\in[1,n-1]$\\
+$size \leftarrow wordsize(DICTIONARY[p])$\\
+$i\leftarrow 1$\\
+$j\leftarrow 1$\\
+\eIf{$ x\ \textbf{mod}\ 2 = 0$}{
+\If{$y+size \geq n$}{
+$y\leftarrow y-(y+size-n)$
+}
+\For{$i\leftarrow 1  \textbf{to}\ size$}{
+$S[x][y]=DICTIONARY[p][i]$
+}
+}{
+\If{$x+size \geq n$}{
+$x\leftarrow x-(x+size-n)$
+}
+$i \leftarrow 1$\\
+\For{$i\leftarrow 1  \textbf{to}\ size$}{
+$S[x][y]=DICTIONARY[p][i]$
+}
+}
+$p \leftarrow p-1$
+}
+$\textbf{return}\ S$
+}
+\end{algorithm}
+\end{document}
