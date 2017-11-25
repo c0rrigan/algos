@@ -53,3 +53,10 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+# Latex output files
+*.aux
+*.log
+*.out
+*.synctex.gz
+*.pdf
+*.dvi
