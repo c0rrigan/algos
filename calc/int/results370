@@ -1,0 +1,134 @@
+theta = x
+Problema 1
+   /    / x \     \
+log| tan| - | + 1 |
+   \    \ 2 /     /
+
+Problema 2
+   /    / x \ \      / x \2
+log| tan| - | |   tan| - |
+   \    \ 2 / /      \ 2 /
+--------------- - ---------
+       2              4
+
+phi = x
+Problema 3
+        /    / x \ \
+        | tan| - | |
+        |    \ 2 / |         /    / x \ \
+    atan| -------- | 2   atan| tan| - | | 2
+x       \     3    /         \    \ 2 / /
+- + ------------------ - ------------------
+3            3                    3
+
+Problema 4
+     /    / x \ \
+     | tan| - | |
+     |    \ 2 / |
+atanh| -------- | 2
+     \     3    /
+-------------------
+         3
+
+Problema 5
+                                               /            / x \ \
+                                               | sqrt(2) tan| - | |
+        / x       /    / x \ \ \               |            \ 2 / |
+sqrt(2) | - - atan| tan| - | | |   sqrt(2) atan| ---------------- |
+        \ 2       \    \ 2 / / /               \         2        /
+-------------------------------- + --------------------------------
+                2                                  2
+
+Problema 6
+    /    / x \       \
+atan| tan| - | 2 + 1 |
+    \    \ 2 /       /
+
+theta = x
+Problema 7
+    /    / x \   \
+atan| tan| - | 2 | 5
+    \    \ 2 /   /     x
+-------------------- - -
+          6            3
+
+Problema 8
+         /    / x \ \
+         | tan| - | |
+         |    \ 2 / |
+    atanh| -------- | 8
+x        \     3    /
+- - -------------------
+5            15
+
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('fclose')" style="font-weight:bold">fclose</a>
+Invalid file identifier. Use fopen to generate a valid file identifier.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('granville_master_370', 'C:\Users\deckard\algos\calc\int\granville_master_370.m', 41)" style="font-weight:bold">granville_master_370</a> (<a href="matlab: opentoline('C:\Users\deckard\algos\calc\int\granville_master_370.m',41,0)">line 41</a>)
+fclose(file);
+} 
+doc fclose
+granville_master_370
+theta = x
+Problema 1
+   /    / x \     \
+log| tan| - | + 1 |
+   \    \ 2 /     /
+
+Problema 2
+   /    / x \ \      / x \2
+log| tan| - | |   tan| - |
+   \    \ 2 / /      \ 2 /
+--------------- - ---------
+       2              4
+
+phi = x
+Problema 3
+        /    / x \ \
+        | tan| - | |
+        |    \ 2 / |         /    / x \ \
+    atan| -------- | 2   atan| tan| - | | 2
+x       \     3    /         \    \ 2 / /
+- + ------------------ - ------------------
+3            3                    3
+
+Problema 4
+     /    / x \ \
+     | tan| - | |
+     |    \ 2 / |
+atanh| -------- | 2
+     \     3    /
+-------------------
+         3
+
+Problema 5
+                                               /            / x \ \
+                                               | sqrt(2) tan| - | |
+        / x       /    / x \ \ \               |            \ 2 / |
+sqrt(2) | - - atan| tan| - | | |   sqrt(2) atan| ---------------- |
+        \ 2       \    \ 2 / / /               \         2        /
+-------------------------------- + --------------------------------
+                2                                  2
+
+Problema 6
+    /    / x \       \
+atan| tan| - | 2 + 1 |
+    \    \ 2 /       /
+
+theta = x
+Problema 7
+    /    / x \   \
+atan| tan| - | 2 | 5
+    \    \ 2 /   /     x
+-------------------- - -
+          6            3
+
+Problema 8
+         /    / x \ \
+         | tan| - | |
+         |    \ 2 / |
+    atanh| -------- | 8
+x        \     3    /
+- - -------------------
+5            15
+
