@@ -1,0 +1,261 @@
+\documentclass[a4paper]{article}
+\usepackage{amssymb,amsmath,bm,mathtools}
+\usepackage[tmargin=2cm,lmargin=2.8cm]{geometry}
+\usepackage[spanish]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\newcommand{\ihat}{\boldsymbol{\hat{\imath}}}
+\newcommand{\jhat}{\boldsymbol{\hat{\jmath}}}
+\newcommand{\khat}{\boldsymbol{\hat{\bm{k}}}}
+\newcommand{\euler}{\mathrm{e}}
+\title{Notas de Análisis Vectorial}
+\author{S.N.L.}
+\date{}
+\begin{document}
+\maketitle
+\section{Gráfica de una función y conjuntos de nivel}
+Como sabemos, para $\mathbb{R}^3$ tenemos una base canónica:
+\[\ihat=[1,0,0]\qquad \jhat=[0,1,0]\qquad \khat=[0,0,1]\]
+De modo que cualquier vector en $\mathbb{R}^3$ puede ser expresado como:
+\[\vec{r}=x\ihat+y\jhat+z\khat \]
+o de forma equivalente:
+\[\vec{r}=[x,y,z]\]
+Dando una generalización:
+\[\wp_1=[1,0,0,\ldots,0]\]
+\[\wp_2=[0,1,0,\ldots,0]\]
+\[\vdots\]
+\[\wp_n=[0,0,0,\ldots,n]\]
+es la base canónica de $\mathbb{R}^n$ de modo que cualquier vector $\vec{x}$ de $\mathbb{R}^n$ se puede expresar como:
+\[\vec{x}=x_1\wp_1+x_2\wp_2+x_3\wp_3+\ldots\,+x_n\wp_n\]
+o de forma equivalente
+\[\vec{x}=[x_1,x_2,x_3,\ldots,x_n]\]
+Se dice que una función $f(x)$ es una función escalar de varias variables si: $f: U \subset \mathbb{R}^n \rightarrow \mathbb{R}$\\Por ejemplo:\\
+\hspace*{3em} Sea $f:U\subset\mathbb{R}^4\rightarrow\mathbb{R}$ con $[x_1,x_2,x_3,x_4]\longrightarrow \frac{x_1+x_2}{x_3+x_4}$\\
+Una función vectorial de variables reales es una función de la forma:
+\[\vec{f}=U\subset\mathbb{R}^n\longrightarrow\mathbb{R}^m\]
+\begin{center}
+\small{(la función en $\mathbb{R}^n$ se puede encontrar en $\mathbb{R}^m$)}\\
+\end{center}
+Si $\beta_1=\{\wp_1,\wp_2,\ldots,\wp_n\}$ y $\beta_2=\{\wp_1,\wp_2,\ldots,\wp_m\}$
+son las bases canónicas de $\mathbb{R}_n$ y de $\mathbb{R}_m$ respectivamente, luego:
+\[[x_1,x_2,x_3,\ldots,x_n]=[f_1,f_2,f_3,\ldots,f_m]\]
+Donde
+\[f_1=f_1(x^{-1}=f(x_1,x_2,x_3,\ldots,x_n)\]
+son funciones escalares, luego:
+\[\vec{f}(x_1,x_2,x_3,\ldots,x_n)=[f_1,f_2,f_3,\ldots,f_m]\]
+\subsection{Ejemplos}
+Ejemplo 1:
+\[
+\begin{split}
+&\vec{f}:\mathbb{R}^3\longrightarrow\mathbb{R}^4\\
+&[x,y,z]\longmapsto[xy-xz,x^2y+x^2z^2,xyz,xy-yz]
+\end{split}
+\]
+
+Ejemplo 2:
+\[
+\begin{split}
+&\vec{f}:\mathbb{R}^4\longrightarrow\mathbb{R}^3\\
+&[x_1,x_2,x_3,x_4]\longmapsto[x_1^2-x_2^2,x_3^2-x_4^2,x_4^2-x_2^2]
+\end{split}
+\]
+\subsection{Gráficas de funciones y conjuntos de nivel}
+Si $f:U\subset\mathbb{R}^n\rightarrow\mathbb{R}$ entonces la gráfica de $f$ se define como:
+\[grafica\ de\ f=\{\vec{x}\in\mathbb{R}^{n+1}\big|\vec{x}=[x_1,x_2,\ldots,x_n,f(x_1,x_2,\ldots,x_n)]\}\]
+Si $f:U\subset\mathbb{R}^n\longrightarrow\mathbb{R}$, luego el conjunto de nivel de $f$ se define como:
+\[conjunto\ de\ nivel\ de\ f:\{\vec{x}\in U\big|f(\vec{x})=C\}\]
+{\small Nota: El conjunto de nivel siempre esta contenido en el dominio de $f$}
+\section{Límites y Continuidad de Funciones Vectoriales}
+Una función vectorial del tipo $\vec{f}:\mathbb{R}\longrightarrow\mathbb{R}^2$ con $\vec{f}(t)=[f_1(t),f_2(t),f_3(t)]$
+o bien $\vec{f}(t)=f_1\ihat+f_2\jhat+f_3\khat$ representa una curva en $\mathbb{R}^3$\\
+Si $p(x,y,z)$ es cualquier punto de la curva $C$, entonces $x=f_1(t)$, $y=f_2(t)$, $y=f_3(t)$
+
+Ejercicio 3.8: Mostrar que si $\vec{f}(t)$ es continua en $t=t_0$, es decir:
+\[\lim_{t\rightarrow t_0} \vec{f}(t)\]
+entonces:
+\[\lim_{t\rightarrow t_0}\vec{f}_i(t)=\vec{f}_i(t_0)\]
+Solución: Como
+\[\lim_{t\rightarrow t_0}\vec{f}_i(t)=\vec{f}_i(t_0)\]
+es decir:
+\begin{equation}\lim_{t\rightarrow t_0} \vec{f}(t)=[f_1(t_0),f_2(t_0),f_3(t_0)] \end{equation}
+Por otro lado:
+\begin{equation}
+\lim_{t\rightarrow t_0} \vec{f}(t)=\Big[\lim_{t\rightarrow t_0} f_1(t),\lim_{t\rightarrow t_0} f_2(t),\lim_{t\rightarrow t_0} f_3(t)\Big]
+\end{equation}
+De 1 y 2 se tiene por igualdad  de vectores que:
+\[\lim_{t\rightarrow t_0} f_1(t)=f_1(t_0),\lim_{t\rightarrow t_0} f_2(t)=f_2(t_0),\lim_{t\rightarrow t_0} f_3(t)=f_3(t_0)\]
+Es decir, las funciones escalares son continuas.
+\section{Derivada de una función vectorial}
+Si $\vec{f}$ es una función vectorial de la forma $\vec{f}:\mathbb{R}\longrightarrow\mathbb{R}^3$ en $\vec{f}(t)=[f_1(t),f_2(t),f_3(t)]$ entonces la derivada de $\vec{f}$ con respecto de $t$ (si existe) que se denota como:
+\[\frac{d\vec{f}(t)}{dt}\qquad o\qquad f'(t)\]
+y se define como:
+\[\vec{f}'(t)=\lim_{\Delta_t\rightarrow 0} \frac{\vec{f}(t+\Delta_t - \vec{f}(t)}{\Delta_t}\]
+\subsection{Propiedades de las derivadas}
+Si $\phi(t),\vec{A}(t),\vec{B}(t)\ y\ \vec{C}(t)$ son funciones escalares y vectoriales respectivamente, entonces se cumple:
+\begin{enumerate}
+{\item $\frac{d}{dt}[\phi(t)\vec{A}(t)]=\phi'(t)\vec{A}(t)+\phi(t)\vec{A}'(t)$}
+{\item $\frac{d}{dt}[\vec{A}(t)\cdot\vec{B}(t)]=\vec{A}'(t)\cdot\vec{B}(t)+\vec{A}(t)\cdot\vec{B}'(t)]$}
+{\item $\frac{d}{dt}[\vec{A}(t)\times\vec{B}(t)]=\vec{A}'(t)\times\vec{B}(t)+\vec{A}(t)\times\vec{B}'(t)$}
+{\item $\frac{d}{dt}[\vec{A}(t)\cdot\vec{B}(t)\times\vec{C}(t)]=\vec{A}'(t)\cdot\vec{B}(t)\times\vec{C}(t)+\vec{A}(t)\cdot\vec{B}'(t)\times\vec{C}(t)+\vec{A}(t)\cdot\vec{B}(t)\times\vec{C}'(t)$}
+\end{enumerate}
+\subsection{Un poco de ecuaciones diferenciales}
+Una ecuación diferencial ordinaria de orden $n$ se puede expresar como:
+\[f(x,y,y',y'',\ldots,y^{(n-1)})=0\]
+Una ecuación diferencial ordinaria lineal homogénea con coeficientes constantes de orden $n$ se representa como:
+\begin{equation}
+a_ny^n+a_{n-1}y^{n-1}+\ldots+a_1y'+a_0y=0
+\end{equation}
+Para resolver 3 se propone:
+\[y=c\euler\]
+Luego:
+\begin{align*}
+y'&=cp\euler^{px}\\
+y''&=cp^2\euler^{px}\\
+\vdots&\hspace{2em}\vdots\\
+y^{(n)}&=cp^n\euler^{px}
+\end{align*}
+Por lo tanto:
+\begin{gather*}
+a_ncp^n\euler^{px}+a_{n-1}p^{n-1}\euler^{px}+\ldots+a_1cp\euler^{px}+a_0\euler^{px}=0\\
+(a_np^n+a_{n-1}p^{n-1}+\ldots +a_1p+a_0)c\euler^{px}=0
+\end{gather*}
+De donde:
+\begin{equation}
+\label{eq4}
+a_np^n+a_{n-1}p^{n-1}+\ldots+a_1p+a_0=0
+\end{equation}
+Por el Teorema Fundamental del Álgebra, el polinomio \ref{eq4} tiene a lo mas $n$ raices reales y complejas.\\
+Seab $P_1,P_2,\ldots,P_n$ las raíces de 4, la solución general es:
+\[y=c_1\euler^{px}+c_2\euler^{p_2x}+\ldots+c_n\euler^{p_{n}x}\]
+\subsection{Derivadas Parciales}
+Sea $f:U\subset\mathbb{R}^n\longrightarrow\mathbb{R}$ una función escalar, así $f=f(x_1,x_2,\ldots,x_n)$. Si ${\wp_1,\wp_2,\ldots,\wp_n}$ es la base canónica de $\mathbb{R}^n$, entonces:
+\[\vec{x}=x_1\wp_1+x_2\wp_2+\ldots+x_n\wp_n\]
+Luego, \textbf{la derivada parcial de $f$ con respecto a la variable $x_j$}, que se denota como $\frac{\delta f}{\delta x_j}$, se define como:
+\[\lim_{h\rightarrow 0} \frac{f(x_1,x_2,\ldots,x_n+h)-f(x_1,x_2,\ldots,x_n)}{h}\]
+O bien:
+\[\frac{\delta f}{\delta x_j}=\lim_{h\rightarrow 0}\frac{f(\vec{x}+h\wp_j)-f(\vec{x}}{h})\]
+Si $f$ tiene mas de una derivada, estas se denotan como:
+\[\frac{\delta^2 f}{\delta x_1^2}\ ,\frac{\delta^2 f}{\delta x_1 \delta x_2}\]
+O también, si $f=f(u,v,w)$:
+\[\frac{\delta^2 f}{\delta u \delta v}=f_{vu}\]
+\subsection{Propiedades de las Derivadas Parciales}
+Si $\vec{A}=\vec{A}(u,v,w) y\vec{B}=\vec{B}(u,v,w) y \phi=\phi(u,v,w)$ son funciones vectoriales y escalares diferenciables, entonces se cumple:
+\begin{enumerate}
+{\item $\frac{\delta}{\delta u}(\phi\vec{A})=\phi_u\vec{A}+\phi\vec{A}_u$}
+{\item $\frac{\delta}{\delta u}(\vec{A}+\vec{B})=\vec{A}_u+\vec{B}_u$}
+{\item $\frac{\delta}{\delta u}(\vec{A}\cdot\vec{B})=\vec{A}_b\cdot\vec{B}+\vec{A}\cdot\vec{B}_u$}
+{\item $\frac{\delta}{\delta u}(\vec{A}\times\vec{B})=\vec{A}_u\times\vec{B}+\vec{A}\times\vec{B}_u$}
+\end{enumerate}
+\subsection{Longitud de Arco}
+Si una curva $C$ en $\mathbb{R}^3$ esta representada por:
+\begin{equation}
+\begin{cases}
+x&=f_1(t)\\
+y&=f_2(t)\\
+z&=f_3(t)
+\end{cases}
+\end{equation}
+Del cálculo básico, el elemento diferencial de longitud de arco es:
+\[ds^2=dx^2+dy^2+dz^2\]
+Dividiendo entre $dt^2$ se tiene:
+\[\frac{ds^2}{dt^2}=\frac{dx^2}{dt^2}+\frac{dy^2}{dt^2}+\frac{dz^2}{dt^2}\]
+Por las ecuaciones 5 se tiene:
+\[\Big(\frac{ds}{dt}\Big)^2[f'_1(t)]^2+[f'_2(t)]^2+[f'_3(t)]^2\]
+Luego:
+\[\Big(\frac{ds}{dt}\Big)^2=\lVert\vec{f'}(t)\rVert\]
+i.e.
+\[\frac{ds}{dt}=\lVert\vec{f'}(t)\rVert\]
+Luego:
+\[ds=\lVert\vec{f'}(t)\rVert dt\]
+Si la curva $C$ esta definida en un intervalo $a\leq t\leq b$, luego:
+\begin{equation}
+\label{eqarco}
+S=\int_a^b \lVert\vec{f'}(t)\rVert dt
+\end{equation}
+Si se tiene una curva plana $C$ en el plano $xy$ representada por $y=y(x)$ con $a\leq x \leq b$ luego:
+\[\vec{r}=x\ihat+y(x)\jhat\] 
+luego:
+\[\vec{r'}(x)=\ihat+y'(x)\jhat\]
+así:
+\[\lVert \vec{r'}(x)\rVert=\sqrt{1+[y'(x)]^2}\]
+De done la longitud de arco $C$ de $a$ a $b$ es:
+\[S=\int_a^b\sqrt{1+[y'(x)]^2} dx\]
+Si en la ecuación \ref{eqarco} se deja libre el límite superior, entonces se tiene que es una función de una variable:
+\begin{equation}
+S(t)=\int_0^t \lVert \vec{f'}(\mathfrak{z})\lVert d\mathfrak{z}
+\end{equation}
+como:
+\[\frac{ds(t)}{dt}=\lVert f'(t)\rVert\]
+Luego, $s(t)$ es una función estrictamente creciente, de modo que admite una única inversa 
+denominada $t=q(s)$.Así la curva $C$ representada por:
+\begin{equation}
+\vec{r}(t)=x(t)\ihat+y(t)\jhat+z(t)\khat \qquad a\leq t\leq b
+\end{equation}
+y se puede representar como:
+\[\vec{r}[q(s)]=x[q(s)]\ihat+y[q(s)]\jhat+z[q(s)]\khat\qquad 0\leq s\leq l\]
+o bien:
+\begin{equation}
+\vec{r}(s)=x(s)\ihat+y(s)\jhat+k(s)\khat\qquad 0\leq s\leq l
+\end{equation}
+\textbf{Ejercicio}:Obtener un vector unitario tangente al circulo de radio $a$ en $t=\pi/2$\\[2ex]
+\textbf{Solución}:Sabemos que $f(t)=a\cos(t)\ihat+a\sen(t)\jhat$ y $f''(t)=-a\cos(t)\ihat+a\cos(t)\jhat$, dado que:
+\[\lVert f''(t)\rVert=a\]
+luego:
+\[\mathbf{\hat{T}}=\frac{f''(t)}{\lVert f''(t) \rVert}=-\sin(t)\ihat+\cos(t)\jhat\]
+para $t=\pi/2$ se tiene:
+\[\mathbf{\hat{T}}(\pi/2)=-\ihat\]
+\subsection{Aplicaciones a la Geometría Diferencial}
+Sea $C$ una curva en el espacio $\mathbb{R}^3$ definida por:
+\[\vec{r}(t)=x(t)\ihat+y(t)\jhat+z(t)\khat \qquad a\leq t\leq b\]
+O bien:
+\[\vec{r}(s)=x(s)\ihat+y(s)\jhat+z(s)\khat \qquad 0\leq s\leq l\]
+El vector \textbf{normal principal} a la curva $C$ en cada punto se define como:
+\begin{equation}
+\label{vecnorm}
+\frac{dt\mathbf{\hat{T}}}{ds}=\mathbf{K}\mathbf{\hat{N}}
+\end{equation}
+Donde $\mathbf{K}$ es la \textbf{curvatura} de $C$ y $\rho=\frac{1}{\mathrm{K}}$ es el radio de curvatura de $C$ y es:
+\[\mathbf{K}=\Big\lVert \frac{d\mathbf{\hat{T}}}{ds}\Big\rVert\]
+Se sabe que $\frac{d\mathbf{\hat{T}}}{ds}\perp\mathbf{\hat{T}}$, como
+\[\frac{d\mathbf{\hat{T}}}{ds}\parallel\mathbf{\hat{N}}\]
+se tiene que:
+\[\mathbf{\hat{T}}\perp\mathbf{\hat{N}}\]
+i.e. $\mathbf{\hat{T}}\cdot\mathbf{\hat{N}}=0$
+El vector \textbf{binomial} $\mathbf{\hat{B}}$ se define como:
+\begin{equation}
+\label{vecbinomial}
+\mathbf{\hat{B}}=\mathbf{\hat{T}}\times\mathbf{\hat{N}}
+\end{equation}
+Asi como se denota ,$\mathbf{\hat{B}}$ es un vector unitario, pues:
+\[\lVert \mathbf{\hat{B}} \rVert=\lVert \mathbf{\hat{T}} \rVert\lVert \mathbf{\hat{N}} \rVert\sin(90)\]
+La torsión de la curva $C$ se define como:
+\begin{equation}
+ \frac{d\mathbf{\hat{B}}}{ds}=-\vartheta\mathbf{\hat{N}}
+\end{equation}
+Por lo anterior se tiene que los vectores $\mathbf{\hat{T}},\mathbf{\hat{N}},\mathbf{\hat{B}}$ forman una terna positiva o un sistema derecho que de \ref{vecbinomial} se tiene:
+\begin{equation}
+\label{vectall}
+\mathbf{\hat{B}}=\mathbf{\hat{T}}\times\mathbf{\hat{N}}\qquad\mathbf{\hat{N}}=\mathbf{\hat{B}}\times\mathbf{\hat{T}}\qquad\mathbf{\hat{T}}=\mathbf{\hat{N}}\times\mathbf{\hat{B}}
+\end{equation}
+\textbf{Ejercicio}:Obtener una expresión para $\frac{d\mathbf{\hat{T}}}{ds}$\\[2ex]
+\textbf{Solución:}:Por las ecuaciones \ref{vectall}:
+\[\mathbf{\hat{N}}=\mathbf{\hat{B}}\times\mathbf{\hat{T}}\]
+luego:
+\[\frac{d\mathbf{\hat{N}}}{ds}=\frac{d\mathbf{\hat{B}}}{ds}\times\mathbf{\hat{T}}+\mathbf{\hat{B}}\times\frac{d\mathbf{\hat{N}}}{ds}\]
+Por las ecuaciones \ref{vecbinomial} y \ref{vecnorm}:
+\begin{align*}
+\frac{d\mathbf{\hat{N}}}{ds}&=-\vartheta\mathbf{\hat{N}}\times\mathbf{\hat{B}}\times(\mathbf{K}\mathbf{\hat{N}})\\
+\frac{d\mathbf{\hat{N}}}{ds}&=-\vartheta\mathbf{\hat{N}}\times\mathbf{\hat{T}}+\mathbf{K}\mathbf{\hat{B}}\times\mathbf{\hat{N}}
+\end{align*}
+por las ecuaciones \ref{vectall}:
+\begin{equation}
+\label{vectdn}
+\frac{d\mathbf{\hat{N}}}{ds}=\vartheta\mathbf{\hat{B}}-\mathbf{K}\mathbf{\hat{T}}
+\end{equation}
+Las ecuaciones \ref{vecnorm}, \ref{vecbinomial},\ref{vectdn} son llamadas las \textbf{ecuaciones de Frenet-Serret}:
+\begin{align*}
+\frac{d\mathbf{\hat{T}}}{ds}&=\mathbf{K}\mathbf{\hat{N}}\\
+\frac{d\mathbf{\hat{B}}}{ds}&=-\vartheta\mathbf{\hat{N}}\\
+\frac{d\mathbf{\hat{N}}}{ds}&=\vartheta\mathbf{\hat{B}}-\mathbf{K}\mathbf{\hat{T}}
+\end{align*}
+\end{document}
