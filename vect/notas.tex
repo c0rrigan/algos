@@ -257,5 +257,75 @@ Las ecuaciones \ref{vecnorm}, \ref{vecbinomial},\ref{vectdn} son llamadas las \t
 \frac{d\mathbf{\hat{T}}}{ds}&=\mathbf{K}\mathbf{\hat{N}}\\
 \frac{d\mathbf{\hat{B}}}{ds}&=-\vartheta\mathbf{\hat{N}}\\
 \frac{d\mathbf{\hat{N}}}{ds}&=\vartheta\mathbf{\hat{B}}-\mathbf{K}\mathbf{\hat{T}}
+\end{align*}\\
+Si $C$ es la curva representada por $\vec{r}(t)=x(t)\ihat+y(t)\jhat+z(t)\khat\ ,a\leq t\leq b$, entonces:
+\begin{align*}
+\mathbf{K}&=\frac{\lVert \vec{r'}(t)\times\vec{r''}\rVert}{\lVert \vec{r'}(t)\rVert^3}\\
+\vartheta&=\frac{[\vec{r'}(t)\quad\vec{r''}(t)\quad\vec{r'''}(t)]}{\lVert \vec{r'}(t)\times\vec{r''}(t)\rVert^2}
 \end{align*}
+También:
+\begin{align*}
+\mathbf{\hat{T}}&=\frac{\vec{r'}(t)}{\lVert \vec{r'}(t)}\\
+\mathbf{\hat{B}}&=\frac{\vec{r'}(t)\times\vec{r''}(t)}{\rVert \vec{r'}(t)\times\vec{r''}(t)\lVert}\\
+\mathbf{\hat{N}}&=\frac{[\vec{r'}(t)\times\vec{r''}(t)]\times\vec{r'}(t)}{\lVert [\vec{r'}(t)\times\vec{r''}(t)]\times\vec{r'}(t)\rVert}
+\end{align*}
+\section{Coordenadas curvilíneas}
+\subsection{Coordenadas polares}
+Si $P(x,y)$ es un punto del plano, de manera que:
+\begin{gather*}
+x=r\cos \phi\\
+y=r\sin \phi
+\end{gather*}
+y también se tiene:
+\begin{gather*}
+r=\sqrt{x^2+y^2}\quad r\in[0,\infty]\\
+\phi=\tan^{-1}\Big(\frac{y}{x}\Big)\quad\phi\in[0,2\pi] 
+\end{gather*}
+luego:
+\begin{gather}
+\tag{Sistema cartesiano}
+\vec{r}=x\ihat+y\jhat\\
+\tag{Sistema polar}
+\vec{r}=r\cos\ \phi\ihat+r\sin\ \phi\jhat
+\end{gather}
+\subsection{Coordenadas cilíndricas}
+Si $P(x,y,z)$ es cualquier punto en $\mathbb{R}^3$, entonces:
+\begin{gather*}
+x=\rho\cos\ \phi\\
+y=\rho\sin\ \phi\\
+z=z
+\end{gather*}
+y también:
+\begin{gather*}
+\rho=\sqrt{x^2+y^2}\quad\rho\geq 0\\
+\phi=\tan^{-1}\Big(\frac{y}{x}\Big)\quad\phi\in[0,2\pi] 
+z=z
+\end{gather*}
+luego:
+\begin{gather}
+\tag{Sistema cartesiano}
+\vec{r}=x\ihat+y\jhat+z\khat\\
+\tag{Sistema cilindrico}
+\vec{r}=\rho\cos\ \phi\ihat+\rho\sin\ \phi\jhat+z\khat
+\end{gather}
+\subsection{Coordenadas esféricas}
+Si $P(x,y,z)$ es cualquier punto en $\mathbb{R}^3$, entonces:
+\begin{gather*}
+x=r\sin\theta\cos\phi\\
+y=r\sin\theta\sin\phi\\
+z=r\cos\theta 
+\end{gather*}
+luego:
+\begin{gather*}
+r=\sqrt{x^2+y^2+z^2}\quad r\geq 0\\
+\theta=\cos^{-1}\Bigg(\frac{z}{\sqrt{x^2+y^2+z^2}}\Bigg)\quad 0\leq\theta\leq\pi\\
+\phi=\tan^{-1}\Big(\frac{y}{x}\Big)\quad\phi\in[0,2\pi] 
+\end{gather*}
+de modo que:
+\begin{gather}
+\tag{Sistema cartesiano}
+\vec{r}=x\ihat+y\jhat+z\khat\\
+\tag{Sistema esférico}
+\vec{r}=r\sin\theta\cos\phi\ihat+r\sin\theta\sin\phi\jhat+r\cos\theta\khat 
+\end{gather}
 \end{document}
