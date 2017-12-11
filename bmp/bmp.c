@@ -226,16 +226,24 @@ void drawline(Matrix *map,Point a,Point b){
                   map->data[ymin+i][j+2]=255;
                 }
             }
-        }else
+        }
+        else
         {
-            //int k;
-            //float m=(a.y-b.y)/(a.x-b.x);
-            //int size=abs(a.x-b.x);
-            //int x=min(a.x,b.x);
-            //for(k=0;k<size;k++,x++){
-            //    int y=(int)(x-a.x/m)+a.y;
-            //    map->data[y][x]=0{
-            //}
+            int k;
+            float m=(a.y-b.y)/(a.x-b.x);
+            printf("%f",m);
+            int size=abs(a.x-b.x)/3;
+            int x=min(a.x,b.x);
+            x-=(x%3!=0)?x-x%3:0;
+            int s;
+            for(k=0;k<size;k++,x+=3){
+                int y=(int)m*(x-a.x)+a.y;
+                printf("x:%d,y:%d\n",x,y);
+                s=x*3;
+                map->data[y][s]=0;
+                map->data[y][s+1]=0;
+                map->data[y][s+2]=0;
+            }
         }
     }
 
@@ -267,12 +275,7 @@ int main(int argc,char *argv[]){
     bmp=newbmp(512,512);
     map=newmatrix(bmp->ImageHeader.height,bmp->ImageHeader.width*bmp->ImageHeader.bits/8);
     whitebackground(map);
-    drawline(map,(Point){.x=100, .y=100},(Point){.x=100, .y=400});
-    drawline(map,(Point){.x=350, .y=100},(Point){.x=350, .y=400});
-    drawline(map,(Point){.x=100, .y=300},(Point){.x=350, .y=300});
-    drawline(map,(Point){.x=400, .y=100},(Point){.x=400, .y=400});
-    drawline(map,(Point){.x=450, .y=100},(Point){.x=450, .y=350});
-    drawline(map,(Point){.x=450, .y=370},(Point){.x=450, .y=400});
+    drawline(map,(Point){.x=0, .y=0},(Point){.x=100, .y=100});
     savedata(map,bmp);
     savebmp(bmp,"output.bmp");
     //fclose(file);
