@@ -352,6 +352,21 @@ luego:
 \[\mathbf{\hat{T}}=\frac{f''(t)}{\lVert f''(t) \rVert}=-\sin(t)\ihat+\cos(t)\jhat\]
 para $t=\pi/2$ se tiene:
 \[\mathbf{\hat{T}}(\pi/2)=-\ihat\]
+\subsection{Derivada de una función de varias variables}
+Sea $\vec{f}=U\subset\mathbb{R}^n\longrightarrow\mathbb{R}^m$ diferenciable en $\vec{x}=\vec{x_0}$, la derivada de $\vec{f}$ en el punto $\vec{x_0}$ se define como :
+\[\lim_{\vec{x}\rightarrow\vec{x_0}}\frac{\abs{\vec{f}(x)-\vec{f}(x_0)-\mathbb{T}(\vec{x}-\vec{x_0})}}{\abs{\vec{x}-\vec{x_0}}}\]
+Donde $\mathbb{T}$ es una matriz $m\times n$ dada por:
+\[\mathbb{T}(\vec{x_0})=
+\begin{bmatrix}
+\frac{\delta f_1}{\delta x_1}&\frac{\delta f_1}{\delta x_2}&\ldots&\frac{\delta f_1}{\delta x_n}\\
+\frac{\delta f_2}{\delta x_1}&\frac{\delta f_2}{\delta x_2}&\ldots&\frac{\delta f_2}{\delta x_n}\\
+\frac{\delta f_1}{\delta x_1}&\frac{\delta f_2}{\delta x_2}&\ldots&\frac{\delta f_1}{\delta x_n}\\
+\vdots&\vdots&\ddots&\vdots\\
+\frac{\delta f_m}{\delta x_1}&\frac{\delta f_2}{\delta x_2}&\ldots&\frac{\delta f_m}{\delta x_n}\\
+\end{bmatrix}
+\]
+Así:
+\[\mathbb{D}\vec{f}(\vec{x})=\mathbb{T}(\vec{x})\]
 \subsection{Aplicaciones a la Geometría Diferencial}
 Sea $C$ una curva en el espacio $\mathbb{R}^3$ definida por:
 \[\vec{r}(t)=x(t)\ihat+y(t)\jhat+z(t)\khat \qquad a\leq t\leq b\]
@@ -417,6 +432,52 @@ También:
 \mathbf{\hat{B}}&=\frac{\vec{r'}(t)\times\vec{r''}(t)}{\rVert \vec{r'}(t)\times\vec{r''}(t)\lVert}\\
 \mathbf{\hat{N}}&=\frac{[\vec{r'}(t)\times\vec{r''}(t)]\times\vec{r'}(t)}{\lVert [\vec{r'}(t)\times\vec{r''}(t)]\times\vec{r'}(t)\rVert}
 \end{align*}
+\subsection{Curva con longitud de arco como argumento}
+Si se tiene una curva $C$ dada por una función $\vec{r}(s)$ cuyo argumento es la longitud de arco $s$, se tiene que:
+\[
+\mathbf{\hat{T}}=\frac{d}{ds}\vec{r}(s)\\
+\] 
+\section{Superficies}
+Sea $S$ una superficie reproducida por:
+\[\vec{r}=\vec{r}(u,v)=x(u,v)\ihat+y(u,v)\jhat+z(u,v)\khat\]
+$u$ y $v$ son parámetros.
+Si se mantiene fijo el parámetro $u$, i.e., decimos que se tiene una curva $u=c$,
+ si se mantiene fijo el parámetro $v$, decimos que se tiene la curva $v=c$
+Luego, los vectores $\frac{\delta\vec{r}}{\delta u}$ y $\frac{\delta\vec{r}}{\delta v}$ son tangentes
+a las variables $v=constante$ y $u=constante$.
+De donde el vector $\frac{\delta\vec{r}}{\delta u}\times\frac{\delta\vec{r}}{dv}$ es un vector \textbf{normal} a la superficie $S$. La superficie $S$ se dice que no tiene puntos singulares si $\frac{\delta\vec{r}}{\delta u}\neq 0$ y $\frac{\delta\vec{r}}{\delta v}\neq 0$ y también si
+$\frac{\delta\vec{r}}{\delta u}$ y $\frac{\delta\vec{r}}{\delta v}$ no son tangentes mutuamente.\\
+Si la superficie $S$ no tiene puntos singulares, entonces el vector normal unitario
+a $S$ es:
+\[\mathbf{\hat{n}}=\frac{\frac{\delta\vec{r}}{\delta u}\times\frac{\delta\vec{r}}{\delta v}}{\abs{\frac{\delta\vec{r}}{\delta u}\times\frac{\delta\vec{r}}{\delta v}}}\]
+o bien:
+\[
+\mathbf{\hat{n}}=\frac{\vec{r}_u\times\vec{r}_v}{\abs{\vec{r}_u\times\vec{r}_v}}
+\]
+Una superficie $S$ también se puede representar por:
+\[z=z(x,y)\]
+luego, las ecuaciones paramétricas de la superficie son:
+\[\begin{cases}
+x=x\\
+y=y\\
+z=z(x,y)
+\end{cases}\] 
+De donde la representación vectorial de $S$ es:
+\[\vec{r}=x\ihat+y\jhat+z(x,y)\khat\]
+luego:
+\[\frac{\delta\vec{r}}{\delta x}=\vec{r}_x=\ihat+(\frac{\delta z}{\delta x})\khat\]
+y
+\[\frac{\delta\vec{r}}{\delta y}=\vec{r}_y=\jhat+(\frac{\delta z}{\delta y})\khat\]
+de donde:
+\[\vec{r}_x\times\vec{r}_y=-(\frac{\delta z}{\delta x})\ihat-(\frac{\delta z}{\delta y})\jhat+\khat\]
+de modo que:
+\[\mathbf{\hat{n}}=\frac{-(\frac{\delta z}{\delta x})\ihat-(\frac{\delta z}{\delta y})\jhat+\khat}{\sqrt{(\frac{\delta z}{\delta x})^2+(\frac{\delta z}{\delta y})^2+1}}\]
+Si la superficie $S$ esta representada por una función $\phi(x,y,z)$, su vector normal unitario para cada punto de $S$ esta dado por:
+\[\mathbf{\hat{n}}=\frac{\phi_x\ihat+\phi_y\jhat+\phi_z\khat}{\sqrt{\phi_x^2+\phi_y^2+\phi_z^2}}\]
+\subsection{Planos tangentes a una superficie}
+Si se tiene una superficie dada por la ecuación $\phi(x,y,z)$, la ecuación del plano tangente en un punto $(x_0,y_0,z_0)$ esta dado por:
+\[\mathbf{\hat{n}}\cdot\overrightarrow{P_oP}=0\]
+donde $\overrightarrow{P_oP}=[x-x_0,y-y_0,z-z_0]$ 
 \section{Coordenadas curvilíneas}
 \subsection{Coordenadas polares}
 Si $P(x,y)$ es un punto del plano, de manera que:
