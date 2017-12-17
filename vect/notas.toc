@@ -1,0 +1,36 @@
+\select@language {spanish}
+\contentsline {section}{\numberline {1}Producto Punto(Producto Escalar)}{2}
+\contentsline {subsection}{\numberline {1.1}Propiedades}{2}
+\contentsline {subsection}{\numberline {1.2}Perpendicularidad u Ortogonalidad de Vectores}{2}
+\contentsline {section}{\numberline {2}Triple Producto Escalar}{2}
+\contentsline {subsection}{\numberline {2.1}Interpretaci\IeC {\'o}n geom\IeC {\'e}trica}{2}
+\contentsline {section}{\numberline {3}Producto Cruz(Producto Vectorial)}{2}
+\contentsline {subsection}{\numberline {3.1}Propiedades}{3}
+\contentsline {subsection}{\numberline {3.2}Paralelismo de Vectores}{3}
+\contentsline {subsection}{\numberline {3.3}Interpretaci\IeC {\'o}n Geom\IeC {\'e}trica del Producto Cruz}{3}
+\contentsline {subsection}{\numberline {3.4}Desigualdad de Cauchy-Schwarz}{3}
+\contentsline {section}{\numberline {4}Triple Producto Vectorial}{3}
+\contentsline {section}{\numberline {5}Conjuntos Rec\IeC {\'\i }procos de Vectores}{3}
+\contentsline {section}{\numberline {6}Ecuaci\IeC {\'o}n de la recta}{4}
+\contentsline {subsection}{\numberline {6.1}Ecuaci\IeC {\'o}n de la recta que pasa por dos puntos}{4}
+\contentsline {subsection}{\numberline {6.2}Distancia de un punto a una recta}{4}
+\contentsline {subsection}{\numberline {6.3}Ecuaci\IeC {\'o}n de una recta que pasa por un punto y es paralela a una recta}{4}
+\contentsline {subsection}{\numberline {6.4}Distancia de un punto a una recta $ax+by=c$}{4}
+\contentsline {section}{\numberline {7}Ecuaci\IeC {\'o}n de un plano}{5}
+\contentsline {subsection}{\numberline {7.1}Ecuaci\IeC {\'o}n del plano dado un vector normal y un punto}{5}
+\contentsline {subsection}{\numberline {7.2}Ecuaci\IeC {\'o}n de un plano que pasa por 3 puntos}{5}
+\contentsline {section}{\numberline {8}Gr\IeC {\'a}fica de una funci\IeC {\'o}n y conjuntos de nivel}{5}
+\contentsline {subsection}{\numberline {8.1}Ejemplos}{6}
+\contentsline {subsection}{\numberline {8.2}Gr\IeC {\'a}ficas de funciones y conjuntos de nivel}{6}
+\contentsline {section}{\numberline {9}L\IeC {\'\i }mites y Continuidad de Funciones Vectoriales}{6}
+\contentsline {section}{\numberline {10}Derivada de una funci\IeC {\'o}n vectorial}{7}
+\contentsline {subsection}{\numberline {10.1}Propiedades de las derivadas}{7}
+\contentsline {subsection}{\numberline {10.2}Un poco de ecuaciones diferenciales}{7}
+\contentsline {subsection}{\numberline {10.3}Derivadas Parciales}{8}
+\contentsline {subsection}{\numberline {10.4}Propiedades de las Derivadas Parciales}{8}
+\contentsline {subsection}{\numberline {10.5}Longitud de Arco}{8}
+\contentsline {subsection}{\numberline {10.6}Aplicaciones a la Geometr\IeC {\'\i }a Diferencial}{10}
+\contentsline {section}{\numberline {11}Coordenadas curvil\IeC {\'\i }neas}{11}
+\contentsline {subsection}{\numberline {11.1}Coordenadas polares}{11}
+\contentsline {subsection}{\numberline {11.2}Coordenadas cil\IeC {\'\i }ndricas}{11}
+\contentsline {subsection}{\numberline {11.3}Coordenadas esf\IeC {\'e}ricas}{12}
